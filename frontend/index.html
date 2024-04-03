@@ -17,14 +17,17 @@
     <section class="pag">
       <div class="background"></div>
       <div class="form">
-        <form action="/action_page.php" method="post">
+        <form  id="myForm"   method="post">
           <label for="fname">Nome:</label>
-          <input type="text" id="fname" name="fname" /><br /><br />
+          <input type="text" id="fname" name="nome" /><br /><br />
           <label for="lname">Notebook:</label>
-          <input type="text" id="lname" name="lname" /><br /><br />
-          <input type="submit"  id="btn"  value="Submit" />
+          <input type="text" id="lnotebook" name="notebook" /><br /><br />
+          <input type="button"  id="btn"  value="button" onclick="inserirUser()"/>
         </form>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/frontend/main.js"></script>
+    
   </body>
 </html>
