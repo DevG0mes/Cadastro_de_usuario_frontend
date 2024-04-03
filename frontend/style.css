@@ -8,23 +8,28 @@ body {
     overflow: hidden; /* utilizado para a pagina não rolar */
     font-family: 'Poppins', sans-serif;
 }
-
-.background {
+.pag{
     width: 1920px;
     height: 1080px;
-    background-image: url(./assets/Fundo\ Teams\ 2023\ \(1\)\ 2.png);
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.background{
+    width: 450px;
+    height: 120px;
+    position: absolute;
+    margin-bottom: 35%;
+    background-image: url(./assets/LOGO\ PSI\ 1.png);
+    background-size: cover;
+    background-position: center;
+}
 
-.container-login {
+.form {
     width: 374px;
     height: 500px; /* Ajustado para a altura se ajustar ao conteúdo */
     border-radius: 40px;
-    background-color: #fff; /* Trocado de #ffff para #fff */
+    background-color: #f2f2f2ff; /* Trocado de #ffff para #fff */
     text-align: center;
     padding: 20px; /* Adicionado espaçamento interno */
     margin-top: 50px; /* Adicionado espaçamento superior */
@@ -35,18 +40,9 @@ body {
     align-items: center; /* Centraliza horizontalmente */
 }
 
-.container-login input {
-    display: block; /* Exibir inputs como blocos */
-    margin: 10px auto; /* Espaçamento entre os inputs */
-    width: 80%; /* Largura dos inputs */
-    border-radius: 40px;
-    padding: 20px;
-    
-}
-
-button {
-    display: block; /* Exibir botão como bloco */
-    margin: 10px auto; /* Centralizar botão */
-    border-radius: 40px;
-    padding: 20px;
+.form #btn{
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    float: right;
 }

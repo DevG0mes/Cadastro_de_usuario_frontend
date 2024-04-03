@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    />
     <title>Home Page</title>
-</head>
-<header>
-    <nav>
-
-    </nav>
-</header>
-<body>
-    <section class="background">
-        <div class="container-login">
-           <input type="text" placeholder="Name">
-           <input type="text" placeholder="Notebook">
-           <button>Submit</button>
-        </div>
-</section>
-</body>
+  </head>
+  <header>
+    <nav></nav>
+  </header>
+  <body>
+    <section class="pag">
+      <div class="background"></div>
+      <div class="form">
+        <form action="/action_page.php" method="post">
+          <label for="fname">Nome:</label>
+          <input type="text" id="fname" name="fname" /><br /><br />
+          <label for="lname">Notebook:</label>
+          <input type="text" id="lname" name="lname" /><br /><br />
+          <input type="submit"  id="btn"  value="Submit" />
+        </form>
+      </div>
+    </section>
+  </body>
 </html>
