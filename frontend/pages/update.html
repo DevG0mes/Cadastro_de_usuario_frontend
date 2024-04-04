@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
@@ -14,8 +14,8 @@
   <body>
     <header>
       <nav>
-        <a>Criar</a>
-        <a href="/frontend/pages/update.html">Atualizar</a>
+        <a href="/frontend/index.html">Criar</a>
+        <a>Atualizar</a>
         <a>Mostrar</a>
         <a>Deletar </a>
       </nav>
@@ -23,12 +23,19 @@
     <section class="pag">
       <div class="background"></div>
       <div class="form">
-        <form  id="myForm"   method="post">
+        <form  id="pesq"   method="put">
+          <label for="fname">Nome:</label>
+          <input type="text" id="fname" name="nome" /><br /><br />
+          <input type="button"  id="btn"  value="button" onclick="getUser()"/>
+        </form>
+      </div>
+      <div class="Modform">
+        <form  id="modForm"   method="put">
           <label for="fname">Nome:</label>
           <input type="text" id="fname" name="nome" /><br /><br />
           <label for="lname">Notebook:</label>
           <input type="text" id="lnotebook" name="notebook" /><br /><br />
-          <input type="button"  id="btn"  value="button" onclick="inserirUser()"/>
+          <input type="button"  id="btn"  value="button" onclick="updateUser()"/>
         </form>
       </div>
     </section>
