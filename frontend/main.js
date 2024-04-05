@@ -60,6 +60,9 @@ function pesquisarUsuario() {
             userInfoDiv.appendChild(userNamePara);
             userInfoDiv.appendChild(userNotebookPara);
 
+            let inputId = document.getElementById('id')
+            inputId.value = usuario.id
+
             // Garante que a div userInfo esteja visível
             userInfoDiv.style.display = "block";
 
@@ -82,7 +85,8 @@ function updateUser() {
     var notebook = document.getElementById("lnotebook").value;
 
     // Verifica se todos os campos estão preenchidos
-    if (!id || !nome || !notebook) {
+    if (!id || !nome || !notebook) {          
+
         console.log("Todos os campos devem ser preenchidos.");
         return;
     }
