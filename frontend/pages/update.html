@@ -27,20 +27,26 @@
         <form  id="pesq"   method="get">
           <label for="fname">Nome:</label>
           <input type="text" id="nome" name="nome" /><br /><br />
-          <input type="button"  id="btn"  value="button" onclick="getUser()"/>
+          <input type="button"  id="btn"  value="button" onclick="pesquisarUsuario()"/>
           <div id="resultado"></div>
         </form>
       </div>
       <div class="form">
         <h1>Atualizar dados</h1>
-        <form  id="modForm"   method="put">
+        <form id="modForm" method="put" onsubmit="event.preventDefault(); updateUser();">
+          <input type="hidden" id="id" name="id" />
           <label for="fname">Nome:</label>
           <input type="text" id="fname" name="nome" /><br /><br />
           <label for="lname">Notebook:</label>
           <input type="text" id="lnotebook" name="notebook" /><br /><br />
-          <input type="button"  id="btn"  value="button" onclick="updateUser()"/>
-        </form>
+          <button type="submit">Atualizar</button>
+      </form>
       </div>
+      <div id="userInfo" >
+        <p><strong>ID:</strong> <span id="userId"></span></p>
+        <p><strong>Nome:</strong> <span id="userName"></span></p>
+        <p><strong>Notebook:</strong> <span id="userNotebook"></span></p>
+    </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/frontend/main.js"></script>

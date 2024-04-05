@@ -68,5 +68,18 @@ h2{
     border-radius: 10px;
     border: 2px solid black;
     padding: 10px;
-    float: right;
+    
+}
+#pesq{
+   font-size: 15px;
+}
+#resultado{
+    text-align: center;
+    position: absolute;
+    margin-top: 30px;
+}
+#userInfo{
+    font-size: 32px;
+    
+    color:black;
 }
