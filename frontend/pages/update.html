@@ -23,13 +23,16 @@
     <section class="pag">
       <div class="background"></div>
       <div class="form">
-        <form  id="pesq"   method="put">
+        <h2>Pesquisar dados</h2>
+        <form  id="pesq"   method="get">
           <label for="fname">Nome:</label>
-          <input type="text" id="fname" name="nome" /><br /><br />
+          <input type="text" id="nome" name="nome" /><br /><br />
           <input type="button"  id="btn"  value="button" onclick="getUser()"/>
+          <div id="resultado"></div>
         </form>
       </div>
-      <div class="Modform">
+      <div class="form">
+        <h1>Atualizar dados</h1>
         <form  id="modForm"   method="put">
           <label for="fname">Nome:</label>
           <input type="text" id="fname" name="nome" /><br /><br />
