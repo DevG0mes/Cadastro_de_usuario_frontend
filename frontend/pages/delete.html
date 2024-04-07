@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
@@ -14,23 +14,22 @@
   <body>
     <header>
       <nav>
-        <a>Criar</a>
+        <a href="/frontend/index.html" >Criar</a>
         <a href="/frontend/pages/update.html">Atualizar</a>
         <a href="/frontend/pages/mostrar.html">Mostrar</a>
-        <a href="/frontend/pages/delete.html">Deletar </a>
+        <a>Deletar </a>
       </nav>
     </header>
     <section class="pag">
       <div class="background"></div>
       <div class="form">
-        <h3>Criar usuario</h3>
-        <form  id="myForm"   method="post">
-          <label for="fname">Nome:</label>
-          <input type="text" id="fname" name="nome" /><br /><br />
-          <label for="lname">Notebook:</label>
-          <input type="text" id="lnotebook" name="notebook" /><br /><br />
-          <input type="button"  id="btn"  value="button" onclick="inserirUser()"/>
+        <h3>Excluir usuário</h3>
+        <form id="myForm" method="delete">
+            <label for="fname">ID:</label>
+            <input type="text" id="fname" name="id" /><br /><br />
+            <input type="button" id="btn" value="Excluir" onclick="excluirUsuario()"/>
         </form>
+
       </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

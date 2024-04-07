@@ -107,3 +107,76 @@ function updateUser() {
     });
 }
 
+
+function excluirUsuario() {
+    // Obtém o valor do input
+    const id = document.getElementById('fname').value;
+    
+    // Verifica se o ID está vazio
+    if (id.trim() === '') {
+      alert('Por favor, insira um ID.');
+      return;
+    }
+  
+    // URL do endpoint que você deseja excluir, passando o ID na URL
+    const url = 'http://localhost:3000/delete/' + id;
+  
+    // Realiza a solicitação DELETE
+    axios.delete(url)
+      .then(response => {
+        console.log('Recurso excluído com sucesso:', response.data);
+        alert('Recurso excluído com sucesso!');
+      })
+      .catch(error => {
+        console.error('Erro ao excluir recurso:', error);
+        alert('Erro ao excluir recurso. Verifique o console para mais detalhes.');
+      });
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('mostrarBtn').addEventListener('click', function() {
+        mostrarTodosDados();
+    });
+});
+
+// Função para fazer a requisição GET e converter os dados JSON em uma tabela
+function mostrarTodosDados() {
+    // URL da rota que retorna todos os dados da tabela
+    const url = 'http://localhost:3000/usuario';
+
+    // Faz a requisição GET para obter os dados da tabela
+    axios.get(url)
+        .then(response => {
+            // Converte os dados JSON em uma tabela HTML
+            const tableHTML = converterJsonParaTabela(response.data);
+
+            // Abrir a tabela em uma nova guia
+            const novaGuia = window.open();
+            novaGuia.document.write(tableHTML);
+        })
+        .catch(error => {
+            console.error('Erro ao carregar dados da tabela:', error);
+            alert('Erro ao carregar dados da tabela. Verifique o console para mais detalhes.');
+        });
+}
+
+// Função para converter os dados JSON em uma tabela HTML
+function converterJsonParaTabela(data) {
+    let tableHTML = '<table border="1">';
+    tableHTML += '<thead><tr>';
+    for (let key in data[0]) {
+        tableHTML += '<th>' + key + '</th>';
+    }
+    tableHTML += '</tr></thead>';
+    tableHTML += '<tbody>';
+    data.forEach(item => {
+        tableHTML += '<tr>';
+        for (let key in item) {
+            tableHTML += '<td>' + item[key] + '</td>';
+        }
+        tableHTML += '</tr>';
+    });
+    tableHTML += '</tbody></table>';
+    return tableHTML;
+}

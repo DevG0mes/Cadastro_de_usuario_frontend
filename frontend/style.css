@@ -1,85 +1,99 @@
 * {  
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body {
-    overflow: hidden; /* utilizado para a pagina não rolar */
     font-family: 'Poppins', sans-serif;
 }
-nav{
-    width: 100%;
-    height: 100px;
+
+nav {
+    height: 10vh;
     background-color: orange;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20vh;
 }
-a{
-    font-size: 40px;
+
+a {
+    font-size: 2.5vw;
     color: #fff;
 }
-h1{
-    margin-bottom: 100px;
-    font-size: 40px;
-  }
-h3{
-  margin-bottom: 100px;
-  font-size: 40px;
+
+h1, h2, h3 {
+    font-size: 2.5vw;
+    margin-bottom: 5vh;
 }
-h2{
-    margin-bottom: 100px;
-    font-size: 40px;
-  }
-.pag{
-    width: 1920px;
-    height: 1080px;
+button{
+    border-radius: 1vw;
+    border: 2px solid black;
+    padding: 2vw;
+}
+.pag {
+    width: 100%;
+    height: 80vh;
     display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 10vh;
+}
+
+
+.background {
+    width: 25%;
+    height: auto;
+    background-image: url(./assets/LOGO\ PSI\ 1.png);
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 110px; /* Ajuste conforme necessário para posicionar a imagem abaixo da barra de navegação */
+}
+
+
+.form {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5vw;
+    background-color: #f2f2f2; 
+    text-align: center;
+    padding: 5vh;
+    margin-top: 10vh;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.background{
-    width: 450px;
-    height: 120px;
-    position: absolute;
-    margin-bottom: 35%;
-    background-image: url(./assets/LOGO\ PSI\ 1.png);
-    background-size: cover;
-    background-position: center;
+
+.form #btn {
+    border-radius: 1vw;
+    border: 2px solid black;
+    padding: 2vw;
 }
 
-.form {
-    width: 374px;
-    height: 500px; /* Ajustado para a altura se ajustar ao conteúdo */
-    border-radius: 40px;
-    background-color: #f2f2f2ff; /* Trocado de #ffff para #fff */
-    text-align: center;
-    padding: 20px; /* Adicionado espaçamento interno */
-    margin-top: 50px; /* Adicionado espaçamento superior */
-    border: 2px solid black;
-    display: flex;
-    flex-direction: column; /* Empilha os itens verticalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
+#pesq {
+    font-size: 1.5vw;
 }
 
-.form #btn{
-    border-radius: 10px;
-    border: 2px solid black;
-    padding: 10px;
-    
-}
-#pesq{
-   font-size: 15px;
-}
-#resultado{
+#resultado {
     text-align: center;
-    position: absolute;
-    margin-top: 30px;
+    margin-top: 5vh;
 }
-#userInfo{
-    font-size: 32px;
-    
-    color:black;
+
+#userInfo {
+    font-size: 2vw;
+    color: black;
+}
+
+#userTableContainer {
+    display: block;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+}
+
+.update-form {
+    margin-bottom: 5vh; /* Adicionando margem inferior apenas aos formulários de atualização */
 }
