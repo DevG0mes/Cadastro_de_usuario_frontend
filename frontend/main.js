@@ -8,15 +8,15 @@ function inserirUser(){
         var formData = new FormData(document.getElementById("myForm"));
         var jsonObject = {};
         
-        // Convertendo os dados do formulário para JSON
+        
         formData.forEach(function(nome, notebook){
         jsonObject[notebook] = nome;
         });
         
-        // Convertendo o objeto JSON em uma string
+       
         jsonData = JSON.stringify(jsonObject);
        
-        // Exibindo o JSON no console (você pode fazer algo mais útil com ele, como enviar para um servidor)
+       
         
         console.log(jsonData);
    
@@ -41,7 +41,7 @@ function pesquisarUsuario() {
         console.log(response.data); // Verifica o objeto de resposta retornado pela requisição
         var usuario = response.data;
         if(usuario) {
-            // Cria elementos de parágrafo para cada informação do usuário
+           
             var userIdPara = document.createElement("p");
             userIdPara.textContent = "ID: " + usuario.id;
 
@@ -51,11 +51,10 @@ function pesquisarUsuario() {
             var userNotebookPara = document.createElement("p");
             userNotebookPara.textContent = "Notebook: " + usuario.notebook;
 
-            // Limpa a div userInfo antes de adicionar novos elementos
+          
             var userInfoDiv = document.getElementById("userInfo");
             userInfoDiv.innerHTML = "";
 
-            // Adiciona os elementos de parágrafo à div userInfo
             userInfoDiv.appendChild(userIdPara);
             userInfoDiv.appendChild(userNamePara);
             userInfoDiv.appendChild(userNotebookPara);
@@ -63,7 +62,7 @@ function pesquisarUsuario() {
             let inputId = document.getElementById('id')
             inputId.value = usuario.id
 
-            // Garante que a div userInfo esteja visível
+          
             userInfoDiv.style.display = "block";
 
             console.log("ID: " + usuario.id);
